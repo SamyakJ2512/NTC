@@ -36,7 +36,7 @@ end
 
 
 bar(t);
-set(gca,'xticklabel',{'Naive GCD','Euclid slow','Euclid fast','Extended GCD'});
+set(gca,'xticklabel',{'Naive GCD','Euclid fast','Euclid slow','Extended GCD'});
 title('Comparison between various GCD calculating Algorithms');
 xlabel('Algorithms');
 ylabel('Execution Time');
