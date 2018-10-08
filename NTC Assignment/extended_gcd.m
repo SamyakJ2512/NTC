@@ -7,7 +7,7 @@ function[gcd,x,y] = extended_gcd(a, b)
       else
           [gcd, p, q] = extended_gcd(b, mod(a,b));     %call recursively the same function with smaller value and remainder of 2 values
           x = q;
-          y = p - q * fix(a/b);
+          y = p - q * fix_u(a,b);
       end
       if mod_u(a,gcd) == 0 && mod_u(b,gcd) == 0            %if the gcd divides both a and b then terminate recursion 
           if gcd == a * x + b * y

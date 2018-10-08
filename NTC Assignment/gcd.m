@@ -34,6 +34,8 @@ else
 end
 
 
+fprintf('Showing fast Euclid Algo with steps\n');
+EuclidAlgofaststeps(a,b);                           %calling Euclid algo to show steps
 
 bar(t);
 set(gca,'xticklabel',{'Naive GCD','Euclid fast','Euclid slow','Extended GCD'});
