@@ -25,4 +25,4 @@ Approach:
 
 This is graph which shows the comparision of the 4 algorithms implemented: 
 
-![Graph](./NTC-Assignment/GCD_16_24.jpg)
+[Graph](./NTC-Assignment/GCD_16_24.jpg)
