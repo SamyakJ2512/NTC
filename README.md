@@ -5,6 +5,11 @@ This Repository has all the assignments and the mini-project of the Network and 
 
 Question: Implement the Eucildean Algorithm to find GCD of 2 numbers. 
 
+Contributors:
+
+1. Samyak Jain - 16CO254
+2. Adwaith Gautham - 16CO203
+
 Approach: 
 
 **1**. Naive GCD: 
