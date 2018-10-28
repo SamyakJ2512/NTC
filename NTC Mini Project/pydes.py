@@ -1,4 +1,6 @@
-#-*- coding: utf8 -*-
+#DES Algorithm
+#Samyak Jain
+#16CO254
 
 #Initial permut matrix for the datas
 PI = [58, 50, 42, 34, 26, 18, 10, 2,
@@ -230,7 +232,7 @@ class des():
     
 if __name__ == '__main__':
     key = "secret_k"
-    text= "Hello wo"
+    text= "Samyakja"
     d = des()
     r = d.encrypt(key,text)
     r2 = d.decrypt(key,r)
