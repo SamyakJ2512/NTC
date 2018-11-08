@@ -4,6 +4,11 @@ import pydes
 import pydes96
 import sys
 
+# NOTE: 
+# random_test_des and random_test_des96 are wrapper functions.
+# Core functions are bit_array_gen and count_zero_one. 
+
+# Generates a bit array - helpful for count_zero_one. 
 def bit_array_gen(string) : 
 
     bitarray = list()
@@ -16,15 +21,16 @@ def bit_array_gen(string) :
 
     return bitarray
 
+# Returns number of zeroes and ones in binary. 
 def count_zero_one(binary) : 
 
+    # Get bitarray. 
     bitarray = bit_array_gen(binary)
 
     zero_count = 0
     one_count = 0
-
-    counter = 0
-    
+  
+    # Find number of zeroes and ones. 
     for bit in bitarray : 
         if bit == 0 : 
             zero_count = zero_count + 1
@@ -35,7 +41,8 @@ def count_zero_one(binary) :
     return zero_count, one_count
 
 
-
+ 
+# Random test on des. 
 def random_test_des(FilePath, Key) : 
 
     try: 
@@ -59,6 +66,7 @@ def random_test_des(FilePath, Key) :
     return plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count
 
 
+# Random test of des96. 
 def random_test_des96(FilePath, Key) : 
 
     try: 
@@ -103,6 +111,7 @@ if __name__ == '__main__' :
         print("Exiting...")
         sys.exit()
     
+    # Perform randomtest and get the result. 
     if DesType == 'des' : 
         plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count = random_test_des(FilePath, Key)
     
@@ -111,15 +120,15 @@ if __name__ == '__main__' :
     
 
     print("Details regarding plaintext: ")
-    print("zero_count = ", plaintext_zero_count)
-    print("one_count = ", plaintext_one_count)
+    #print("zero_count = ", plaintext_zero_count)
+    #print("one_count = ", plaintext_one_count)
     print("% 0 = ", plaintext_zero_count / (plaintext_zero_count + plaintext_one_count))
     print("% 1 = ", plaintext_one_count / (plaintext_zero_count + plaintext_one_count))
 
     print("\n")
 
     print("Details regarding ciphertext: ")
-    print("ciphertext_zero_count = ", ciphertext_zero_count)
-    print("ciphertext_one_count = ", ciphertext_one_count)
+    #print("ciphertext_zero_count = ", ciphertext_zero_count)
+    #print("ciphertext_one_count = ", ciphertext_one_count)
     print("% 0 = ", ciphertext_zero_count / (ciphertext_zero_count + ciphertext_one_count))
     print("% 1 = ", ciphertext_one_count / (ciphertext_zero_count + ciphertext_one_count))
