@@ -16,7 +16,10 @@ adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
 
 2. Test on an image file: DES.png
 
-adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des 12345678Entropy of Plaintext =  7.023573507033372
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des 12345678
+
+Entropy of Plaintext =  7.023573507033372
+Entropy of Ciphertext =  7.536454266828691
 
 adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des96 1234567890ab
 Entropy of Plaintext =  7.023573507033372
