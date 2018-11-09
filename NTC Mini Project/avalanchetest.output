@@ -1,0 +1,24 @@
+1. Avalanche test on DES plaintext bits: 
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./avalanchetest.py ./test_files/test_file.docx desmessage
+Enter Key: 12345678
+Reading and encrypting original plaintext.
+Reading and encrypting plaintext with 1 bit difference
+Reading and Encrypting plaintext with 2 bits difference
+Reading and Encrypting plaintext with 3 bits difference
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit =  442086
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) =  442674
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) =  449241
+
+2. Avalanche test on DES96 plaintext bits: 
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./avalanchetest.py ./test_files/test_file.docx des96 message
+Enter Key: 123456789012
+Reading and encrypting original plaintext.
+Reading and encrypting plaintext with 1 bit difference
+Reading and Encrypting plaintext with 2 bits difference
+Reading and Encrypting plaintext with 3 bits difference
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit) =  429736
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) =  430912
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) =  430340
+

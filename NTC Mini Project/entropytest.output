@@ -1,0 +1,35 @@
+1. Test on an executable: ls
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py
+Usage: $  ./entropytest.py  <FilePath> <DesType> <Key>
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/ls des 12345678
+Entropy of Plaintext =  5.953837799296283
+Entropy of Ciphertext =  7.922596364475366
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/ls des96 1234567890ab
+Entropy of Plaintext =  5.953837799296283
+Entropy of Ciphertext =  7.927695135264134
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
+
+
+2. Test on an image file: DES.png
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des 12345678Entropy of Plaintext =  7.023573507033372
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des96 1234567890ab
+Entropy of Plaintext =  7.023573507033372
+Entropy of Ciphertext =  7.543407086139545
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
+
+
+
+
+
+
+
+
+
+

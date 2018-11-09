@@ -62,20 +62,16 @@ def find_hamming_distance(binary1, binary2) :
     bitarray1 = bit_array_gen(binary1)
     bitarray2 = bit_array_gen(binary2)
 
-    print(len(bitarray1), len(bitarray2))
-
     hamming_distance = 0
 
     for x in range(0, min(len(bitarray1), len(bitarray2))) : 
-        print(bitarray1[x], bitarray2[x])
-
         if bitarray1[x] != bitarray2[x] : 
-            print(bitarray1[x], bitarray2[x])
             hamming_distance = hamming_distance + 1
 
     return hamming_distance
         
 
+# This routine does avalanche test with bits changed in the key. 
 def avalanche_test_on_key(FilePath, DesType, Key0, Key1, Key2, Key3) : 
 
     try: 
@@ -106,6 +102,7 @@ def avalanche_test_on_key(FilePath, DesType, Key0, Key1, Key2, Key3) :
     ciphertext_2 = d.encrypt(Key2, plaintext_0)
     ciphertext_3 = d.encrypt(Key3, plaintext_0)
 
+    # Find the hamming distance. 
     hamming_distance_01 = find_hamming_distance(ciphertext_0, ciphertext_1)
     hamming_distance_02 = find_hamming_distance(ciphertext_0, ciphertext_2)
     hamming_distance_03 = find_hamming_distance(ciphertext_0, ciphertext_3)
@@ -175,6 +172,7 @@ def avalanche_test_on_message(FilePath, DesType, Key) :
     #print(plaintext_3, ciphertext_3)
     file_object.close()
 
+    # Find the hamming distance. 
     hamming_distance_01 = find_hamming_distance(ciphertext_0, ciphertext_1)
     hamming_distance_02 = find_hamming_distance(ciphertext_0, ciphertext_2)
     hamming_distance_03 = find_hamming_distance(ciphertext_0, ciphertext_3)
@@ -224,7 +222,7 @@ if __name__ == '__main__' :
         hamming_distance_01, hamming_distance_02, hamming_distance_03 = avalanche_test_on_key(FilePath, DesType, Key0, Key1, Key2, Key3)
      
     
-    print("Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit = ", hamming_distance_01)
+    print("Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit) = ", hamming_distance_01)
     print("Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) = ", hamming_distance_02)
     print("Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) = ", hamming_distance_03)
 
