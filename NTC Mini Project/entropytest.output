@@ -11,7 +11,17 @@ adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files
 Entropy of Plaintext =  5.953837799296283
 Entropy of Ciphertext =  7.927695135264134
 
-adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/ls tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+Entropy of Plaintext =  5.953837799296283
+Entropy of Ciphertext =  7.920659512058909
+
 
 
 2. Test on an image file: DES.png
@@ -24,6 +34,17 @@ Entropy of Ciphertext =  7.536454266828691
 adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png des96 1234567890ab
 Entropy of Plaintext =  7.023573507033372
 Entropy of Ciphertext =  7.543407086139545
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./entropytest.py ./test_files/DES.png tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+Entropy of Plaintext =  7.023573507033372
+Entropy of Ciphertext =  7.53894697954962
 
 adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
 

@@ -5,6 +5,7 @@ import pydes96
 import sys
 import math
 import binascii
+import tripledes
 
 # Find's a Binary's entropy. 
 def find_entropy(Binary) :  
@@ -59,6 +60,14 @@ def entropy_test(FilePath, DesType, Key) :
          d = pydes96.des()
          ciphertext = d.encrypt(Key, plaintext)
     
+    elif DesType == 'tripledes' :
+        
+        Key0 = Key[0:8]
+        Key1 = Key[8:16]
+        Key2 = Key[16:24]
+
+        plaintext, ciphertext = tripledes.tripledes(FilePath, Key0, Key1, Key2)
+    
     # Return entropies of plaintext and ciphertext. 
     return find_entropy(plaintext), find_entropy(ciphertext)
 
@@ -76,12 +85,12 @@ if __name__ == '__main__' :
     Key = sys.argv[3]
 
     # Check for des validity
-    if DesType != 'des' and DesType != 'des96' : 
+    if DesType != 'des' and DesType != 'des96' and DesType != 'tripledes' : 
         print("Wrong DesType entered. ")
         print("Exiting...")
         sys.exit()
 
-    if (DesType == 'des' and len(Key) != 8) or (DesType == 'des96' and len(Key) != 12): 
+    if (DesType == 'des' and len(Key) != 8) or (DesType == 'des96' and len(Key) != 12) or (DesType == 'tripledes' and len(Key) != 24): 
         print("DesType and Key Length don't match. ")
         print("Exiting...")
         sys.exit()

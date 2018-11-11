@@ -13,7 +13,7 @@ def tripledes(FilePath, Key0, Key1, Key2) :
         print("Exitting...")
         sys.exit()
 
-    plaintext = str(file_object.read())
+    plaintext = file_object.read()
 
     if len(plaintext) % 8 != 0 : 
         plaintext = plaintext + (8 - (len(plaintext) % 8)) * '0'
