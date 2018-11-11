@@ -2,6 +2,7 @@
 
 import pydes
 import pydes96
+import tripledes
 import sys
 
 # NOTE: 
@@ -42,7 +43,7 @@ def count_zero_one(binary) :
 
 
  
-# Random test on des. 
+# Randomness test on des. 
 def random_test_des(FilePath, Key) : 
 
     try: 
@@ -66,7 +67,7 @@ def random_test_des(FilePath, Key) :
     return plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count
 
 
-# Random test of des96. 
+# Randomness test of des96. 
 def random_test_des96(FilePath, Key) : 
 
     try: 
@@ -89,6 +90,21 @@ def random_test_des96(FilePath, Key) :
 
     return plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count
 
+# Randomness test of tripledes. 
+def random_test_tripledes(FilePath, Key) : 
+    
+    Key0 = Key[0:8]
+    Key1 = Key[8:16]
+    Key2 = Key[16:24]
+
+    # Encrypt the plaintext
+    plaintext, ciphertext = tripledes.tripledes(FilePath, Key0, Key1, Key2)
+
+    plaintext_zero_count, plaintext_one_count = count_zero_one(plaintext)
+    ciphertext_zero_count, ciphertext_one_count = count_zero_one(ciphertext)
+
+    return plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count
+
 
 if __name__ == '__main__' : 
 
@@ -101,12 +117,12 @@ if __name__ == '__main__' :
     Key = sys.argv[3]
 
     # Check for des validity
-    if DesType != 'des' and DesType != 'des96' : 
+    if DesType != 'des' and DesType != 'des96' and DesType != 'tripledes' : 
         print("Wrong DesType entered. ")
         print("Exiting...")
         sys.exit()
 
-    if (DesType == 'des' and len(Key) != 8) or (DesType == 'des96' and len(Key) != 12): 
+    if (DesType == 'des' and len(Key) != 8) or (DesType == 'des96' and len(Key) != 12) or (DesType == 'tripledes' and len(Key) != 24): 
         print("DesType and Key Length don't match. ")
         print("Exiting...")
         sys.exit()
@@ -117,6 +133,10 @@ if __name__ == '__main__' :
     
     elif DesType == 'des96' : 
         plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count = random_test_des96(FilePath, Key)
+    
+    elif DesType == 'tripledes' : 
+        plaintext_zero_count, plaintext_one_count, ciphertext_zero_count, ciphertext_one_count = random_test_tripledes(FilePath, Key)
+    
     
 
     print("Details regarding plaintext: ")

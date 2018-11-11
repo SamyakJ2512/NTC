@@ -1,3 +1,102 @@
+====================Randomness test on a docx file================================
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/test_file.docx des 12345678 
+Details regarding plaintext: 
+zero_count =  34827
+one_count =  40960
+% 0 =  0.45953791547363004
+% 1 =  0.54046208452637
+
+
+Details regarding ciphertext: 
+ciphertext_zero_count =  33879
+ciphertext_one_count =  45301
+% 0 =  0.4278732003031068
+% 1 =  0.5721267996968932
+
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/test_file.docx des96 123456789034
+Details regarding plaintext: 
+zero_count =  34827
+one_count =  40960
+% 0 =  0.45953791547363004
+% 1 =  0.54046208452637
+
+
+Details regarding ciphertext: 
+ciphertext_zero_count =  33871
+ciphertext_one_count =  44967
+% 0 =  0.42962784444049823
+% 1 =  0.5703721555595017
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/test_file.docx tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+Details regarding plaintext:
+% 0 =  0.4596198741707005
+% 1 =  0.5403801258292995
+
+
+Details regarding ciphertext:
+% 0 =  0.4307417786099348
+% 1 =  0.5692582213900652
+
+=======================Randomtest on /bin/ls===================================
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/ls des 12345678 
+Details regarding plaintext: 
+zero_count =  1207025
+one_count =  1241143
+% 0 =  0.4930319324490803
+% 1 =  0.5069680675509197
+
+
+Details regarding ciphertext: 
+ciphertext_zero_count =  1069063
+ciphertext_one_count =  1478186
+% 0 =  0.4196931670205779
+% 1 =  0.5803068329794221
+
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/ls des96 123456789034
+Details regarding plaintext: 
+zero_count =  1207025
+one_count =  1241143
+% 0 =  0.4930319324490803
+% 1 =  0.5069680675509197
+
+
+Details regarding ciphertext: 
+ciphertext_zero_count =  1110514
+ciphertext_one_count =  1453614
+% 0 =  0.43309616368605625
+% 1 =  0.5669038363139438
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/ls tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+
+Details regarding plaintext:
+% 0 =  0.4930323579941622
+% 1 =  0.5069676420058378
+
+
+Details regarding ciphertext:
+% 0 =  0.43133055752989824
+% 1 =  0.5686694424701018
+
+
+
 =========================Randomness test on a .png file==============================
 
 ~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/DES.png des 12345678 
@@ -28,6 +127,23 @@ ciphertext_zero_count =  223386
 ciphertext_one_count =  288732
 % 0 =  0.4362002507234661
 % 1 =  0.563799749276534
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/DES.png tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+Details regarding plaintext:
+% 0 =  0.4581430529468501
+% 1 =  0.5418569470531499
+
+
+Details regarding ciphertext:
+% 0 =  0.42007080610021785
+% 1 =  0.5799291938997821
 
 
 ================================Randomness test on a pdf file=======================================
@@ -61,70 +177,26 @@ ciphertext_one_count =  3248808
 % 0 =  0.42935722223695705
 % 1 =  0.570642777763043
 
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/16C0203-254.pdf tripledes 123456782345678934567890
+Stage1: Encrypt(E1 Stage)
+Stage1: Encrypt done.
+Stage2: Decrypt(D Stage)
+Stage2: Decrypt done.
+Stage3: Encrypt(E2 Stage)
+Stage3: Encrypt done.
+Complete Encryption done.
+Details regarding plaintext:
+% 0 =  0.45181271754314045
+% 1 =  0.5481872824568595
+
+
+Details regarding ciphertext:
+% 0 =  0.42852914533381137
+% 1 =  0.5714708546661886
 
 
 
-====================Randomness test on a docx file================================
-
-~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/test_file.docx des 12345678 
-Details regarding plaintext: 
-zero_count =  34827
-one_count =  40960
-% 0 =  0.45953791547363004
-% 1 =  0.54046208452637
-
-
-Details regarding ciphertext: 
-ciphertext_zero_count =  33879
-ciphertext_one_count =  45301
-% 0 =  0.4278732003031068
-% 1 =  0.5721267996968932
-
-
-~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/test_file.docx des96 123456789034
-Details regarding plaintext: 
-zero_count =  34827
-one_count =  40960
-% 0 =  0.45953791547363004
-% 1 =  0.54046208452637
-
-
-Details regarding ciphertext: 
-ciphertext_zero_count =  33871
-ciphertext_one_count =  44967
-% 0 =  0.42962784444049823
-% 1 =  0.5703721555595017
 
 
 
-=======================Randomtest on /bin/ls===================================
-
-~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/ls des 12345678 
-Details regarding plaintext: 
-zero_count =  1207025
-one_count =  1241143
-% 0 =  0.4930319324490803
-% 1 =  0.5069680675509197
-
-
-Details regarding ciphertext: 
-ciphertext_zero_count =  1069063
-ciphertext_one_count =  1478186
-% 0 =  0.4196931670205779
-% 1 =  0.5803068329794221
-
-
-~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./randomtest.py ./test_files/ls des96 123456789034
-Details regarding plaintext: 
-zero_count =  1207025
-one_count =  1241143
-% 0 =  0.4930319324490803
-% 1 =  0.5069680675509197
-
-
-Details regarding ciphertext: 
-ciphertext_zero_count =  1110514
-ciphertext_one_count =  1453614
-% 0 =  0.43309616368605625
-% 1 =  0.5669038363139438
 
