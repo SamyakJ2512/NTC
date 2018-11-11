@@ -22,6 +22,31 @@ Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit) =  43434
 Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) =  435950
 Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) =  434913
 
+a2. Test on changing key bits: 
+
+~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./avalanchetest.py ./test_files/ls des key
+Enter Key0: 02345678
+Enter Key1: 12345678
+Enter Key2: 32345678
+Enter Key3: 72345678
+Reading and encrypting original plaintext.
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit) =  0
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) =  437781
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) =  431804
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./avalanchetest.py ./test_files/ls des96 key
+Enter Key0: 0234567890ab
+Enter Key1: 1234567890ab
+Enter Key2: 3234567890ab
+Enter Key3: 7234567890ab
+Reading and encrypting original plaintext.
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_1bit) =  434354
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_2bit) =  434529
+Hamming Distance between encrypt(plaintext) and encrypt(plaintext_3bit) =  435853
+
+adwi@adwi:~/Thegoal/sem5/NTC/NTC/NTC Mini Project$
+
+
 1. Avalanche test on DES plaintext bits: 
 
 ~/Thegoal/sem5/NTC/NTC/NTC Mini Project$ ./avalanchetest.py ./test_files/test_file.docx des message
