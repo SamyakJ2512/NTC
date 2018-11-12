@@ -1,5 +1,12 @@
 # DES96 - Improved DES Security
 
+### Team: 
+
+1. Samyak Jain - 16CO254
+2. Adwaith Gautham - 16CO203
+
+### Details about our paper
+
 1. [Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5585593) to the paper. 
 
 2. Explanation of DES96 concept in short: 
@@ -14,9 +21,12 @@ The left hand side 4 bits are used to shuffle the S-Boxes. The rules are as foll
 
 ### What have we implemented? 
 
-1. The Classic DES Algorithm. 
-2. The new DES96 algorithm proposed in the above mentioned paper. 
-3. The triple DES Algorithm. 
+Chosen Language for implementation: **python3**
+
+1. The Classic DES Algorithm - [link](./pydes.py)
+2. The new DES96 algorithm proposed in the above mentioned paper - [link](./pydes96.py)
+3. The triple DES Algorithm - [link](./tripledes.py)
+
 
 ### Tests we have done: 
 
