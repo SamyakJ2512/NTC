@@ -30,5 +30,5 @@ This Repository has all the assignments and the mini-project of the Network and 
 
 This is graph which shows the comparision of the 4 algorithms implemented: 
 
-![Graph](./NTC%20Assignment/GCD_16_24.jpg)
+![Graph](./GCD_16_24.jpg)
 
