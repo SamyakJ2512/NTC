@@ -1,6 +1,3 @@
-# Number Theory and Cryptography
-This Repository has all the assignments and the mini-project of the Network and Cryptography course
-
 ## Coding Assignment 1
 
 ### Question: Implement the Eucildean Algorithm to find GCD of 2 numbers. 
